@@ -6,7 +6,6 @@ A simple diagnostic plugin for self-hosted WordPress sites using Jetpack. This t
 
 - Checks Jetpack connection status (active, partial, or broken)
 - Detects common issues like blocked XML-RPC or REST API
-- Warns if the site is likely a staging site
 - Provides detailed diagnostic logs
 - Built with user-friendliness in mind (no coding required)
 
