@@ -1,0 +1,542 @@
+/* Introduction Section */
+.jcc-intro {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-left: 4px solid #72aee6;
+    padding: 16px 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.jcc-intro p {
+    margin: 0;
+    font-size: 14px;
+    color: #646970;
+}
+
+/* Actions Section */
+.jcc-actions {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.jcc-actions .button-large {
+    padding: 12px 24px;
+    font-size: 16px;
+    height: auto;
+}
+
+/* Loading State */
+.jcc-loading {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    padding: 30px 20px;
+    text-align: center;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.jcc-loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #0073aa;
+    border-radius: 50%;
+    animation: jcc-spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+
+@keyframes jcc-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.jcc-loading p {
+    margin: 0;
+    font-style: italic;
+    color: #646970;
+}
+
+/* Status Summary */
+.jcc-status-summary {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 24px;
+    margin: 20px 0;
+}
+
+.jcc-status-header {
+    text-align: center;
+}
+
+.jcc-status-message {
+    margin: 0 0 12px 0;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+.jcc-status-description {
+    margin: 0;
+    font-size: 16px;
+    color: #646970;
+    line-height: 1.5;
+}
+
+/* Three-Tier Status Colors */
+/* 🔴 Failure - Critical (Red) */
+.jcc-status-summary.failure {
+    border-left: 4px solid #d63638;
+    background: #fcf0f1;
+}
+
+.jcc-status-summary.failure .jcc-status-message {
+    color: #d63638;
+}
+
+/* 🟡 Issue - Degraded (Orange/Yellow) */
+.jcc-status-summary.issue {
+    border-left: 4px solid #dba617;
+    background: #fcf9e8;
+}
+
+.jcc-status-summary.issue .jcc-status-message {
+    color: #996800;
+}
+
+/* 🟢 Success - Connected (Green) */
+.jcc-status-summary.success {
+    border-left: 4px solid #00a32a;
+    background: #f7fcf0;
+}
+
+.jcc-status-summary.success .jcc-status-message {
+    color: #00a32a;
+}
+
+/* Details Section */
+.jcc-details {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin: 20px auto;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.jcc-details-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #c3c4c7;
+    background: #f6f7f7;
+    text-align: center;
+}
+
+.jcc-details-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #1d2327;
+}
+
+.jcc-details-content {
+    padding: 0;
+}
+
+.jcc-details-item {
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f1;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.jcc-details-item:last-child {
+    border-bottom: none;
+}
+
+.jcc-details-item-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.jcc-details-item-message {
+    flex: 1;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #1d2327;
+}
+
+/* Notices Accordion (inside status summary) */
+.jcc-notices-accordion {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.jcc-toggle-notices {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #646970;
+    font-size: 14px;
+    padding: 0;
+    text-decoration: none;
+}
+
+.jcc-toggle-notices:hover {
+    color: #135e96;
+}
+
+.jcc-toggle-notices .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+    transition: transform 0.2s ease;
+}
+
+.jcc-toggle-notices.expanded .dashicons {
+    transform: rotate(180deg);
+}
+
+.jcc-notices-content {
+    margin-top: 12px;
+    padding: 16px 0 0 0;
+    text-align: left;
+}
+
+.jcc-notices-intro {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    color: #646970;
+    font-style: italic;
+}
+
+.jcc-notices-list {
+    text-align: left;
+}
+
+.jcc-notices-item {
+    padding: 8px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.jcc-notices-item-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: #646970;
+    font-size: 15px;
+}
+
+.jcc-notices-item-message {
+    flex: 1;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.4;
+    color: #646970;
+}
+
+.jcc-notices-item-message.failure {
+    color: #d63638;
+    font-weight: 500;
+}
+
+.jcc-notices-item-message.issue {
+    color: #996800;
+    font-weight: 500;
+}
+
+/* Notices Separator */
+.jcc-notices-separator {
+    margin: 16px 0 8px 0;
+    padding-top: 12px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.jcc-notices-separator-text {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    color: #646970;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Action Buttons */
+.jcc-action-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.jcc-action-buttons .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+/* User Guidance */
+.jcc-guidance {
+    text-align: center;
+    margin: 20px 0;
+    padding: 16px;
+    background: #f6f7f7;
+    border-radius: 4px;
+}
+
+.jcc-guidance p {
+    margin: 0;
+    font-size: 14px;
+    color: #646970;
+    font-style: italic;
+}
+
+/* Advanced Toggle Section */
+.jcc-advanced-toggle {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.jcc-toggle-actions {
+    text-align: center;
+}
+
+#jcc-toggle-advanced {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#jcc-toggle-advanced .dashicons {
+    transition: transform 0.2s ease;
+}
+
+#jcc-toggle-advanced.expanded .dashicons {
+    transform: rotate(180deg);
+}
+
+/* Advanced Details */
+.jcc-advanced-details {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.jcc-advanced-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #c3c4c7;
+    background: #f6f7f7;
+}
+
+.jcc-advanced-header h3 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #1d2327;
+}
+
+.jcc-advanced-header p {
+    margin: 0;
+    font-size: 14px;
+    color: #646970;
+    line-height: 1.5;
+}
+
+.jcc-advanced-content {
+    background: #f9f9f9;
+}
+
+.jcc-advanced-content pre {
+    margin: 0;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 500px;
+    overflow-y: auto;
+    color: #1d2327;
+}
+
+/* Results Section */
+.jsc-results {
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.jsc-results-header {
+    padding: 16px 20px;
+    border-bottom: 1px solid #c3c4c7;
+    background: #f6f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jsc-results-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #1d2327;
+}
+
+.jsc-results-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.jsc-results-content {
+    background: #f9f9f9;
+}
+
+.jsc-results-content pre {
+    margin: 0;
+    padding: 20px;
+    background: transparent;
+    border: none;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 12px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    max-height: 500px;
+    overflow-y: auto;
+    color: #1d2327;
+}
+
+.jsc-results-content pre::-webkit-scrollbar {
+    width: 8px;
+}
+
+.jsc-results-content pre::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.jsc-results-content pre::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.jsc-results-content pre::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Footer Elements */
+.jsc-footer-notice {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 4px;
+    margin: 30px 0 20px 0;
+    padding: 16px 20px;
+}
+
+.jsc-notice-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.jsc-notice-content .dashicons {
+    color: #856404;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.jsc-notice-content p {
+    margin: 0;
+    color: #856404;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.jcc-version-footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #c3c4c7;
+    margin-top: 20px;
+}
+
+.jcc-version-footer p {
+    margin: 0;
+    color: #646970;
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Sticky Header (Optional Enhancement) */
+.jsc-sticky-header {
+    position: sticky;
+    top: 32px;
+    background: #f0f0f1;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.jsc-sticky-header.active {
+    display: block;
+}
+
+.jsc-sticky-header.inactive {
+    display: none;
+}
+
+/* Enhanced Action Buttons */
+.jsc-results-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.jsc-results-actions .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+
+/* Responsive Design */
+@media (max-width: 782px) {
+    
+    .jcc-action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .jcc-action-buttons .button {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .jcc-advanced-content pre {
+        font-size: 11px;
+        padding: 15px;
+    }
+    
+    .jcc-actions .button-large {
+        width: 100%;
+        font-size: 14px;
+    }
+}
