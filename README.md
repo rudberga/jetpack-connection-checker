@@ -18,8 +18,8 @@ A simple diagnostic plugin for self-hosted WordPress sites using Jetpack. This t
 This is an early release and not fully tested in production environments. Many improvements are planned or in progress, such as:
 
 - Better error explanations and recovery suggestions
-- More precise handling of staging vs. production status
-- Optional debug logging and export
+- Improved UI
+- And more...
 
 ---
 
